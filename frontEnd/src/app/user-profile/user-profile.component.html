@@ -1,0 +1,98 @@
+<div class="main-content">
+  <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="card">
+                <div class="card-header card-header-danger">
+                    <h4 class="card-title">Edit Profile</h4>
+                    <p class="card-category">Complete your profile</p>
+                </div>
+                <div class="card-body">
+                    <form>
+                       <!-- <div class="row">
+                            <div class="col-md-5">
+                              <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Company (disabled)" disabled>
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-3">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Username">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-md-4">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Email address" type="email">
+                                </mat-form-field>
+                            </div>
+                        </div>-->
+                        <div class="row">
+                            <div class="col-md-6">
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Fist Name" [(ngModel)]="firstName" name="firstName" type="text">
+                              </mat-form-field>
+                             
+                            </div>
+                            <div class="col-md-6">
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Last Name" [(ngModel)]="lastName" name="lastName" type="text">
+                              </mat-form-field>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                              <mat-form-field class="example-full-width">
+                               
+                                <input matInput placeholder="Login" [(ngModel)]="login" name="login" type="text">
+                              </mat-form-field>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Password" [(ngModel)]="passWord" name="passWord" type="password">
+                              </mat-form-field>
+                            </div>
+                            
+                           
+                        </div>
+                        <div class="input1">
+                          <label for="amoumt" class="form__label" id="amoumt1">role:</label>
+                          <select name="amoumt"  class="form__field"   [(ngModel)]="roles" id="amoumt" required>
+                            <option selected data-default>Select the role</option>
+                            <option value="ROLE_USER">User</option>
+                            <option value="ROLE_USER,ROLE_ADMIN">Admin</option>
+                             
+                          </select>
+                         
+                          
+                        </div>
+                        
+                        <button mat-raised-button type="submit" (click)="addNewAdmin()" (click)="showNotification('top','center')" class="btn btn-danger pull-right">Create Admin</button>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card card-profile">
+              <div class="card-avatar">
+                  <a href="javascript:void(0)">
+                      <img class="img" src="./assets/img/faces/oussama.jpeg" />
+                  </a>
+              </div>
+              <div class="card-body">
+                  <h6 class="card-category text-gray">Admin</h6>
+                  <h4 class="card-title">Benali Oussama</h4>
+                  <p class="card-description">
+                      Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                  </p>
+                  <a href="javascript:void(0)" class="btn btn-danger btn-round">Log out</a>
+              </div>
+          </div>
+      </div>  
+      </div>
+  </div>
+</div>

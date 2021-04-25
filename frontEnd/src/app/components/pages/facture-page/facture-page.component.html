@@ -1,0 +1,139 @@
+
+<div class="main-content">
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-warning">
+                        <h4 class="card-title">Paiment des factures :</h4>
+                        <p class="card-category">Choose :</p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                            <div class="input1">
+                                <label for="nomRecepteur" id="refContrat" class="form__label">Reference Contrat</label>
+                                <input type="text" [(ngModel)]="refContrat" class="form__field" placeholder="refContrat"  name="refContrat"  id='refContrat' required >
+                                
+                            </div>
+                            <div class="input1">
+                                <label for="mois" id="mois" class="form__label">Month :</label>
+                                <select name="mois" [(ngModel)]="mois" class="form__field" name="mois" id="mois" required>
+                                    <option value="">Select Your Month</option>
+                                    <option value="01">Jan</option>
+                                    <option value="02">Feb</option>
+                                    <option value="03">Mar</option>
+                                    <option value="04">Apr</option>
+                                    <option value="05">May</option>
+                                    <option value="06">Jun</option>
+                                    <option value="07">Jul</option>
+                                    <option value="08">Aug</option>
+                                    <option value="09">Sep</option>
+                                    <option value="10">Oct</option>
+                                    <option value="11">Nov</option>
+                                    <option value="12">Dec</option>
+                                </select> 
+                                {{mois}}               
+                            </div>
+                            </div>
+                            <div class="row">
+                              <div class="input1">
+                                <input type="text" [(ngModel)]="nom"  class="form__field" placeholder="Nom" name="prenomRecepteur" id='prenomRecepteur' required />
+                                <label for="prenomRecepteur" id="prenomRecepteur1" class="form__label">Last name</label>
+                              </div>
+                            <div class="input1">
+                                <input type="text" [(ngModel)]="montant"  class="form__field" placeholder="Amount" name="amount" id='amount' required />
+                                <label for="amount" id="amount1" class="form__label">Amount</label>
+                            </div>
+                            </div>
+                            
+                            <br>
+                            <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="ajoutRecharge()" value="Enter" >Done !</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-profile">
+                    <div class="card-avatar">
+                        <a href="javascript:void(0)">
+                            <img class="img" src="./assets/img/faces/oussama.jpeg" />
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-category text-gray">Admin</h6>
+                        <h4 class="card-title">Benali Oussama</h4>
+                        <p class="card-description">
+                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                        </p>
+                        <a href="/login" class="btn btn-danger btn-round">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  
+
+
+
+
+
+
+
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-warning">
+                        <h4 class="card-title ">Simple Table</h4>
+                        <p class="card-category"> Here is a subtitle for this table</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        RefContrat
+                                    </th>
+                                    <th>Mois</th>
+                                    <th>
+                                        Montant
+                                    </th>
+                                   
+                                    <th>
+                                        Date et Heure
+                                    </th>
+                                    
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let facture of factures">
+                                      <td>{{facture.id}}</td>
+                                      <td>{{facture.refContrat}}</td>
+                                      <td>{{facture.mois}}</td>
+                                      <td>{{facture.montant}}</td>
+                                      
+                                      
+                                      <td>{{facture.date}}</td>
+                                     
+                                      
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+    </div>
+  </div>

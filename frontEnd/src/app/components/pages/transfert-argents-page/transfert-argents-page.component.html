@@ -1,0 +1,127 @@
+<div class="main-content">
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Transfert d'argent :</h4>
+                        <p class="card-category">Choose :</p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                            <div class="input1">
+                                <input type="text" [(ngModel)]="nomRecepteur"  class="form__field" placeholder="Nom Recepteur" name="nomRecepteur" id='nomRecepteur' required />
+                                <label for="nomRecepteur" id="nomRecepteur" class="form__label">Nom Recepteur</label>
+                            </div>
+                            <div class="input1">
+                                <input type="text" [(ngModel)]="cin"  class="form__field" placeholder="CIN" name="cin" id='cin' required />
+                                <label for="cin" id="cin" class="form__label">CIN</label>
+                            </div>
+                            </div>
+                            <div class="row">
+                              <div class="input1">
+                                <input type="text" [(ngModel)]="prenomRecepteur"  class="form__field" placeholder="Prenom Recepteur" name="prenomRecepteur" id='prenomRecepteur' required />
+                                <label for="prenomRecepteur" id="prenomRecepteur1" class="form__label">Prenom Recepteur</label>
+                              </div>
+                            <div class="input1">
+                                <input type="text" [(ngModel)]="montant"  class="form__field" placeholder="Amount" name="amount" id='amount' required />
+                                <label for="amount" id="amount1" class="form__label">Amount</label>
+                            </div>
+                            </div>
+                            
+                            <br>
+                            <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="ajoutTransfert()" value="Recharger" >Done !</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-profile">
+                    <div class="card-avatar">
+                        <a href="javascript:void(0)">
+                            <img class="img" src="./assets/img/faces/oussama.jpeg" />
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-category text-gray">Admin</h6>
+                        <h4 class="card-title">Benali Oussama</h4>
+                        <p class="card-description">
+                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                        </p>
+                        <a href="javascript:void(0)" class="btn btn-danger btn-round">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Simple Table</h4>
+                        <p class="card-category"> Here is a subtitle for this table</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        CIN
+                                    </th>
+                                    <th>Nom Recepeteur</th>
+                                    <th>
+                                        Montant
+                                    </th>
+                                    <th>
+                                      Etat
+                                  </th>
+                                    <th>
+                                        Date et Heure
+                                    </th>
+                                    
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let transfert of transferts">
+                                      <td>{{transfert.id}}</td>
+                                      <td>{{transfert.cin}}</td>
+                                      <td>{{transfert.nomRecepteur}}</td>
+                                      <td>{{transfert.montant}}</td>
+                                      
+                                      <td>{{transfert.etat}}</td>
+                                      <td>{{transfert.date}}</td>
+                                     
+                                      
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+    </div>
+  </div>

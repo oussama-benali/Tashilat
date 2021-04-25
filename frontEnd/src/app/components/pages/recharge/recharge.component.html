@@ -1,0 +1,168 @@
+
+
+
+
+
+<div class="main-content">
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-success">
+                        <h4 class="card-title">Recharge telephonique :</h4>
+                        <p class="card-category">Choose :</p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                            <div class="input1">
+                                <label for="numero" id="numero" class="form__label">Numero</label>
+                                <input type="text" [(ngModel)]="numero"  class="form__field" placeholder="Numero" name="numero" id='numero' required />
+                                
+                              </div>
+                            <div class="input1">
+                              <label for="operator" class="form__label" id="operator">Choose an Operator:</label>
+                              <select name="operator" class="form__field" [(ngModel)]="operateur"   id="operator" required>
+                                <option selected>Select Your Operator</option>
+                                <option value="Iam">Iam
+                                 <!--<img class="imga" src="../../../../assets/img/iam.png" />--> </option>
+                                <option value="Inwi">Inwi
+                                  <!-- <img class="imga" src="../../../../assets/img/inwi.jpg" />--></option>
+                                <option value="Orange">Orange
+                                 <!-- <img class="imga" src="../../../../assets/img/orange.png" />--> </option>
+                              </select>                          </div>
+                            </div>
+                            <div class="row">
+                              <div class="input1">
+                                <label for="offre" class="form__label" id="offre1">Choose an offre:</label>
+                                <select name="offre" class="form__field" [(ngModel)]="offre"  id="offre" required>
+                                  <option selected>Select Your Offer</option>
+                                  <option value="Internet">Internet *1</option>
+                                  <option value="Appel National">Appel National *2</option>
+                                  <option value="Sms">Sms *3</option>
+                                  <option value="Appel International">Appel International*4</option>
+                                </select>
+                                
+                              </div>
+                            <div class="input1">
+                              <label for="amoumt" class="form__label" id="amoumt1">Amount:</label>
+                              <select name="montant"  class="form__field"   [(ngModel)]="montant" id="amoumt" required>
+                                <option selected data-default>Select Your Amount</option>
+                                <option value="10">10 DH</option>
+                                <option value="20">20 DH</option>
+                                <option value="30">30 DH</option>
+                                <option value="40">40 DH</option>
+                                <option value="50">50 DH</option>
+                                <option value="100">100 DH</option>
+                                <option value="200">200 DH</option>  
+                              </select>
+                             
+                              
+                            </div>
+                            </div>
+                            
+                            <br>
+                            <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="ajoutRecharge()" value="Recharger">Done !</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-profile">
+                    <div class="card-avatar">
+                        <a href="javascript:void(0)">
+                            <img class="img" src="./assets/img/faces/oussama.jpeg" />
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-category text-gray">Admin</h6>
+                        <h4 class="card-title">Benali Oussama</h4>
+                        <p class="card-description">
+                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                        </p>
+                        <a href="javascript:void(0)" class="btn btn-danger btn-round">Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-success">
+                      <h4 class="card-title ">Simple Table</h4>
+                      <p class="card-category"> Here is a subtitle for this table</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class=" text-primary">
+                                  <th>
+                                      ID
+                                  </th>
+                                  <th>
+                                      Numero
+                                  </th>
+                                  <th>Operateur</th>
+                                  <th>
+                                      Montant
+                                  </th>
+                                  <th>
+                                    Offre
+                                </th>
+                                  <th>
+                                      Date et Heure
+                                  </th>
+                                  
+                              </thead>
+                              <tbody>
+                                <tr *ngFor="let recharge of recharges">
+                                    <td>{{recharge.id}}</td>
+                                    <td>{{recharge.numero}}</td>
+                                    <td>{{recharge.operateur}}</td>
+                                    <td>{{recharge.montant}}</td>
+                                    
+                                    <td>{{recharge.offre}}</td>
+                                    <td>{{recharge.date}}</td>
+                                   
+                                    
+                                  
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+     
+  </div>
+</div>
+
+
+
+
+<li class="nav-item">
+  <a mat-button class="nav-link active" href="#" >
+      <i class="material-icons">bug_report</i> Bugs
+      <div class="ripple-container"></div>
+  </a>
+</li>

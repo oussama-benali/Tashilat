@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>Update User</h2>
+<mat-dialog-content>
+<input type="text" placeholder="First Name" [(ngModel)]=firstName  >
+<input type="text" placeholder="Login" [(ngModel)]=login  >
+<input type="password" placeholder="Pass Word" [(ngModel)]=passWord  >
+<input type="text" placeholder="Roles" [(ngModel)]=roles  >
+<input type="text" placeholder="Active" [(ngModel)]=active  > 	
+</mat-dialog-content>
+
+<mat-dialog-actions>
+    <button mat-button (click)="close()" >Cancel</button>
+<!--<button mat-raised-button (click)="onDelete(person)">Delete</button>   (click)="delete()"-->
+<button mat-raised-button (click)="update()"  >Update</button>
+</mat-dialog-actions>

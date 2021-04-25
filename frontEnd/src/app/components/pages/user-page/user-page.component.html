@@ -1,0 +1,128 @@
+<div class="main-content">
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            
+                <h1 style="text-align: center; margin: 0px auto;">Welcome {{user.firstName}}</h1>
+            
+
+        </div>
+    </div>
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-chart" >
+                    <div class="card-header card-header-success">
+                        <div class="ct-chart" id="dailySalesChart">
+                            <a href="/user/recharge"><img src="../../../../assets/img/recharge.png" id="recharge"/></a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Recharge Telephonique</h4>
+                        <p class="card-category">
+                            <a href="/user/recharge">Recharger ici</a>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons">access_time</i> updated 4 minutes ago
+                        </div>
+                    </div>
+                
+            </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-warning">
+                        <div class="ct-chart" id="websiteViewsChart">
+                            <a href="/user/facture"><img src="../../../../assets/img/facture.jpg" id="recharge"/></a>
+
+                        </div>
+
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Payement des factures</h4>
+                        
+                        <a href="/user/facture">Payer Facture ici</a>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons">access_time</i> campaign sent 2 days ago
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-danger">
+                        <div class="ct-chart" id="completedTasksChart">
+                            <a href="/user/transfert"><img src="../../../../assets/img/tensfert.jpg" id="recharge"/></a>
+
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Transferst d'arget</h4>
+                        <a href="/user/transfert">Transferer d'argent ici</a>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <i class="material-icons">access_time</i> campaign sent 2 days ago
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        <div class="main-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header card-header-warning">
+                                <h4 class="card-title ">My Operations</h4>
+                                <p class="card-category"> </p>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class=" text-primary">
+                                            <th>
+                                                ID
+                                            </th>
+                                            <th>
+                                                Operation Name
+                                            </th>
+                                           
+                                            <th>
+                                                Montant
+                                            </th>
+                                           
+                                            <th>
+                                                Date et Heure
+                                            </th>
+                                            
+                                        </thead>
+                                        <tbody>
+                                          <tr *ngFor="let operation of operations">
+                                              <td>{{operation.id}}</td>
+                                              <td>{{operation.operation_name}}</td>
+                                             
+                                              <td>{{operation.montant}}</td>
+                                              
+                                              
+                                              <td>{{operation.date}}</td>
+                                             
+                                              
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               
+            </div>
+          </div>
